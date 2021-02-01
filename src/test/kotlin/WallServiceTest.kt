@@ -25,7 +25,12 @@ class WallServiceTest {
             donut = Donut(
                 false, 0,
                 placeholder = Placeholder(false),
-                false, "text"))
+                false, "text"),
+            postSource = PostSource("type", "platform", "data", "url"),
+            geo = Geo("type", "coordinates",
+                place = Place(0, "title", 0, 0, 0, "icon", 0, 0,
+                    0, 0, 0, "address"))
+        )
 
         val expectedArray = add(post)
         expectedArray.id = 1
@@ -55,7 +60,12 @@ class WallServiceTest {
             donut = Donut(
                 false, 0,
                 placeholder = Placeholder(false),
-                false, "text"))
+                false, "text"),
+            postSource = PostSource("type", "platform", "data", "url"),
+            geo = Geo("type", "coordinates",
+                place = Place(0, "title", 0, 0, 0, "icon", 0, 0,
+                    0, 0, 0, "address"))
+        )
 //        post.id = 1
         //Act
         add(post)
@@ -86,7 +96,12 @@ class WallServiceTest {
             donut = Donut(
                 false, 0,
                 placeholder = Placeholder(false),
-                false, "text"))
+                false, "text"),
+            postSource = PostSource("type", "platform", "data", "url"),
+            geo = Geo("type", "coordinates",
+                place = Place(0, "title", 0, 0, 0, "icon", 0, 0,
+                    0, 0, 0, "address"))
+        )
         post.id = 1
         //Act
         val expectedResult: Boolean = update(
