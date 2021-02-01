@@ -22,11 +22,14 @@ data class Post(
     val likes: Likes,
     val reposts: Reposts,
     val views: Views,
-    val donut: Donut
-//    val postSource: PostSource,
-//    var geo: Geo,
-//    var copyHistory: Array<Any> // TODO
-)
+    val donut: Donut,
+    val postSource: PostSource,
+    var geo: Geo
+) {
+    var copyHistory = emptyArray<Any>()
+}
+
+
 
 class Comments(
     val count: Int,
@@ -71,30 +74,30 @@ class Placeholder(
     val placeholder: Boolean
 )
 
-//class PostSource(
-//    val type: String,
-//    val platform: String,
-//    val data: String,
-//    val url: String
-//)
-//
-//class Geo(
-//    val type: String,
-//    var coordinates: String,
-//    val place: Place
-//)
-//
-//class Place(
-//    val id: Int,
-//    val title: String,
-//    val latitude: Int,
-//    val longitude: Int,
-//    val created: Int,
-//    val icon: String,
-//    val checkins: Int,
-//    val updated: Int,
-//    val type: Int,
-//    val country: Int,
-//    val city: Int,
-//    val address: String
-//)
+class PostSource(
+    val type: String,
+    val platform: String,
+    val data: String,
+    val url: String
+)
+
+class Geo(
+    val type: String,
+    var coordinates: String,
+    val place: Place
+)
+
+class Place(
+    val id: Int,
+    val title: String,
+    val latitude: Int,
+    val longitude: Int,
+    val created: Int,
+    val icon: String,
+    val checkins: Int,
+    val updated: Int,
+    val type: Int,
+    val country: Int,
+    val city: Int,
+    val address: String
+)
