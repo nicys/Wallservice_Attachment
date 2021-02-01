@@ -29,7 +29,8 @@ class WallServiceTest {
             postSource = PostSource("type", "platform", "data", "url"),
             geo = Geo("type", "coordinates",
                 place = Place(0, "title", 0, 0, 0, "icon", 0, 0,
-                    0, 0, 0, "address"))
+                    0, 0, 0, "address")),
+            attach = AttachmentType(Attachment.Photo(0, 0, "urlPreview", "urlFullSize"))
         )
 
         val expectedArray = add(post)
@@ -64,7 +65,8 @@ class WallServiceTest {
             postSource = PostSource("type", "platform", "data", "url"),
             geo = Geo("type", "coordinates",
                 place = Place(0, "title", 0, 0, 0, "icon", 0, 0,
-                    0, 0, 0, "address"))
+                    0, 0, 0, "address")),
+            attach = AttachmentType(Attachment.Photo(0, 0, "urlPreview", "urlFullSize"))
         )
 //        post.id = 1
         //Act
@@ -100,7 +102,8 @@ class WallServiceTest {
             postSource = PostSource("type", "platform", "data", "url"),
             geo = Geo("type", "coordinates",
                 place = Place(0, "title", 0, 0, 0, "icon", 0, 0,
-                    0, 0, 0, "address"))
+                    0, 0, 0, "address")),
+            attach = AttachmentType(Attachment.Photo(0, 0, "urlPreview", "urlFullSize"))
         )
         post.id = 1
         //Act

@@ -24,7 +24,8 @@ data class Post(
     val views: Views,
     val donut: Donut,
     val postSource: PostSource,
-    var geo: Geo
+    var geo: Geo,
+    val attach: AttachmentType
 ) {
     var copyHistory = emptyArray<Any>()
 }
