@@ -30,7 +30,8 @@ class WallServiceTest {
             geo = Geo("type", "coordinates",
                 place = Place(0, "title", 0, 0, 0, "icon", 0, 0,
                     0, 0, 0, "address")),
-            attach = AttachmentType(Attachment.Photo(0, 0, "urlPreview", "urlFullSize"))
+            copyHistory = arrayOfNulls(1),
+            attachment = arrayOfNulls(1)
         )
 
         val expectedArray = add(post)
@@ -66,7 +67,8 @@ class WallServiceTest {
             geo = Geo("type", "coordinates",
                 place = Place(0, "title", 0, 0, 0, "icon", 0, 0,
                     0, 0, 0, "address")),
-            attach = AttachmentType(Attachment.Photo(0, 0, "urlPreview", "urlFullSize"))
+            copyHistory = arrayOfNulls(1),
+            attachment = arrayOfNulls(1)
         )
 //        post.id = 1
         //Act
@@ -82,28 +84,29 @@ class WallServiceTest {
     fun testRemovePostByIdInUpdateNegativ() {
         //Arrange
         val post: Post = Post(
-            0, 0, 0, 0, 0, "text", 0,
-            0, false, "postType", 0, false, false,
-            false,false, false, false, 0,
-            comments = Comments(
-                0, false, false, false, false),
-            copyright = Copyright(
-                0, "text", "text", "text"),
-            likes = Likes(
-                0, false, false, false),
-            reposts = Reposts(
-                0, false),
-            views = Views(
-                0),
-            donut = Donut(
-                false, 0,
-                placeholder = Placeholder(false),
-                false, "text"),
-            postSource = PostSource("type", "platform", "data", "url"),
-            geo = Geo("type", "coordinates",
-                place = Place(0, "title", 0, 0, 0, "icon", 0, 0,
-                    0, 0, 0, "address")),
-            attach = AttachmentType(Attachment.Photo(0, 0, "urlPreview", "urlFullSize"))
+                0, 0, 0, 0, 0, "text", 0,
+                0, false, "postType", 0, false, false,
+                false,false, false, false, 0,
+                comments = Comments(
+                        0, false, false, false, false),
+                copyright = Copyright(
+                        0, "text", "text", "text"),
+                likes = Likes(
+                        0, false, false, false),
+                reposts = Reposts(
+                        0, false),
+                views = Views(
+                        0),
+                donut = Donut(
+                        false, 0,
+                        placeholder = Placeholder(false),
+                        false, "text"),
+                postSource = PostSource("type", "platform", "data", "url"),
+                geo = Geo("type", "coordinates",
+                        place = Place(0, "title", 0, 0, 0, "icon", 0, 0,
+                                0, 0, 0, "address")),
+                copyHistory = arrayOfNulls(1),
+                attachment = arrayOfNulls(1)
         )
         post.id = 1
         //Act

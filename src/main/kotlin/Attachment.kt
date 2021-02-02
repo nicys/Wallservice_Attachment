@@ -29,7 +29,7 @@
 //                val size: Int,
 //                val ext: Int,
 //                val date: Int,
-//                val type: Int) : Attachment()
+//                val types: Int) : Attachment()
 //    class Graffiti(val id: Int,
 //                val ownId: Int,
 //                val urlPreview: String,

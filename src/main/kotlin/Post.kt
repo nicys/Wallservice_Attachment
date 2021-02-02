@@ -24,13 +24,10 @@ data class Post(
     val views: Views,
     val donut: Donut,
     val postSource: PostSource,
-    var geo: Geo,
-    var attachment: Array<InterfaceAttach>
-) {
-    var copyHistory = emptyArray<Any>()
-}
-
-
+    var geo: Geo?,
+    var copyHistory: Array<Any?>,
+    var attachment: Array<InterfaceAttach?>
+)
 
 class Comments(
     val count: Int,
