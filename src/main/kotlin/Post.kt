@@ -1,4 +1,7 @@
+import org.jetbrains.annotations.Nullable
+
 data class Post(
+        @Nullable
     var id: Int,
     val ownerId: Int,
     val fromId: Int,
