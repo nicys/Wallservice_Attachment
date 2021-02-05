@@ -1,4 +1,7 @@
-class Comment(
+import org.jetbrains.annotations.Nullable
+
+data class Comment(
+            @Nullable
         val ownerId: Int,
         val postId: Int,
         val fromGroup: Int = 0,
