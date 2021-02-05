@@ -1,4 +1,4 @@
-class CreateComment(
+class Comment(
         val ownerId: Int,
         val postId: Int,
         val fromGroup: Int = 0,
