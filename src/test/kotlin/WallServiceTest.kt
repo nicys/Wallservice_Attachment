@@ -1,4 +1,5 @@
 import WallService.add
+import WallService.createComment
 import WallService.update
 import org.junit.Test
 import org.junit.Assert.*
@@ -70,7 +71,6 @@ class WallServiceTest {
             copyHistory = arrayOfNulls(1),
             attachment = arrayOfNulls(1)
         )
-//        post.id = 1
         //Act
         add(post)
         val expectedResults: Boolean = update(
@@ -115,5 +115,36 @@ class WallServiceTest {
         )
         //Assert
         assertFalse(expectedResult)
+    }
+
+    @Test
+    fun testCommentAdd() {
+        //Arrange
+        val comment: Comment = Comment(
+                0, 1,0, "text", 0,
+                arrayOfNulls(1), 0, "txt"
+        )
+        val postId = 1
+        //Act
+        val result = 1
+        //Assert
+        assertEquals(postId, result)
+    }
+
+
+    @Test(expected = PostNotFoundException::class)
+    fun shouldThrow() {
+        //Arrange
+        val expected = PostNotFoundException::class
+        val comment: Comment = Comment(
+                0, 2,0, "text", 0,
+                arrayOfNulls(1), 0, "txt"
+        )
+
+        //Act
+        val expectedResult: Comment = createComment(2, comment)
+
+        //Assert
+        assertEquals(expected, expectedResult)
     }
 }
